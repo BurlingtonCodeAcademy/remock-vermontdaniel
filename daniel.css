@@ -13,7 +13,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-
+/*Header Container *****************************************************************************************************************/
 #header {
   display: flex;
   width: 99vw;
@@ -35,6 +35,7 @@ body {
   margin-bottom: 30px;
 }
 
+/*All Content Container ***********************************************************************************************************/
 #main {
   display: flex;
   width: 99vw;
@@ -43,7 +44,7 @@ body {
   flex-direction: row;
   justify-content: space-around;
 }
-
+/* Side Bar Container **************************************************************************************************************/
 #main-side-bar {
   display: flex;
   flex-direction: column;
@@ -53,6 +54,18 @@ body {
   flex: 1;
 }
 
+.side-bar-title {
+  display: flex;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#main-side-bar p {
+  margin-bottom: 10px;
+}
+
+/*Top Side Bar --------------------------------------------------------------------------------------------------------------------*/
 #side-content-one {
   display: flex;
   width: auto;
@@ -70,17 +83,7 @@ body {
   margin-bottom: 10px;
 }
 
-.side-bar-title {
-  display: flex;
-  font-size: 20px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-#main-side-bar p {
-  margin-bottom: 10px;
-}
-
+/*Bottom Side Bar -----------------------------------------------------------------------------------------------------------------*/
 #side-content-two {
   display: flex;
   width: auto;
@@ -89,7 +92,7 @@ body {
   margin-top: 30px;
 }
 
-#side-content-two img{
+#side-content-two img {
   display: flex;
   width: 100px;
   height: 100px;
@@ -100,16 +103,17 @@ body {
 
 .learn-button {
   display: flex;
-  margin-right: 170px
+  margin-right: 170px;
 }
 
+/*Main Content *********************************************************************************************************************/
 #main-content {
   display: flex;
   height: auto;
   flex: 3;
   flex-direction: column;
   margin-top: 30px;
-  margin-bottom: 30px
+  margin-bottom: 30px;
 }
 
 #main-title {
@@ -120,7 +124,7 @@ body {
   margin-bottom: 30px;
 }
 
-#main-content img{
+#main-content img {
   display: flex;
   width: 750px;
   height: 300px;
@@ -128,21 +132,21 @@ body {
   margin-left: 35px;
 }
 
-.main-par-title{
+.main-par-title {
   display: flex;
   font-size: 20px;
   margin-top: 30px;
   margin-bottom: 30px;
   margin-left: 35px;
-
 }
 
-#main-content p{
+#main-content p {
   display: flex;
   margin-left: 35px;
   margin-right: 230px;
 }
 
+/*Footer Container *****************************************************************************************************************/
 #footer {
   display: flex;
   width: 100vw;
