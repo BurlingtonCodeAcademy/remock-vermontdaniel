@@ -9,8 +9,8 @@ body {
   max-width: 100vw;
   height: auto;
   margin: 20px 50px 20px 50px;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 8fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 10rem 1fr 1fr;
   gap: 0.3rem 1rem;
   grid-template-areas:
     'header  header  header'
@@ -22,12 +22,12 @@ body {
 #header {
   display: grid;
   grid-area: header;
-  grid-column: 1fr;
-  grid-row: 2fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 8rem 2rem;
   grid-template-areas:
     'title-one'
     'title-two';
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid grey;
 }
 
 #title-one {
@@ -46,11 +46,11 @@ body {
   display: flex;
   grid-area: title-two;
   justify-content: center;
-  margin-top: -2rem;
   color: gray;
   font-family: 'Courier New', Courier, monospace;
-  text-shadow: .5px .5px 2px gray;
+  text-shadow: 0.5px 0.5px 2px gray;
   font-weight: 600;
+  
 }
 
 /* Main Container /////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -59,8 +59,8 @@ body {
   max-width: 100vw;
   height: auto;
   grid-area: main;
-  grid-column: 1fr 1fr 1fr;
-  grid-row: 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
   gap: 1rem 3rem;
   grid-template-areas:
     'main-side-bar main-content main-content'
@@ -72,113 +72,120 @@ body {
 #main-side-bar {
   display: grid;
   grid-area: main-side-bar;
-  grid-column: 1fr;
-  grid-row: 1fr 1fr;
-  gap: .3rem 1rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: 55rem 75rem;
   grid-template-areas:
     'side-bar-one'
     'side-bar-two';
+  gap: 20rem 20rem
 }
 
 .side-bar-title {
   display: flex;
+  grid-area: side-bar-title;
   color: gray;
   font-size: 20px;
   font-family: 'Courier New', Courier, monospace;
   font-variant-caps: small-caps;
   font-weight: 600;
-  text-shadow: .5px .5px 2px black;
+  text-shadow: 0.5px 0.5px 2px black;
 }
 
-/* Side Bar One -------------------------------------------------------------------------------------------------------------------*/
-#side-bar-one {
+/* Side Bar One ----------------------------------------------------------------------------------------------------------------------------------------*/
+
+#side-bar-one{
   display: grid;
   grid-area: side-bar-one;
-  grid-column: 1fr;
-  grid-row: 1fr 1fr 1fr 1fr;
-  gap: 0.2rem 1rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.date {
+  display: flex;
+  grid-area: date;
+  background-color: gray;
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  font-variant-caps: small-caps;
+  text-shadow: 0.5px 0.5px 2px black;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+  color: blanchedalmond;
+  box-shadow: 1px 1px 3px black;
+  font-weight: 600;
+}
+
+.side-bar-one-par {
+  display: flex;
+  grid-area: side-bar-one-par;
+  
 }
 
 .date-block {
   display: grid;
-  grid-column: 1fr;
-  grid-row: 1fr 1fr 1fr;
+  grid-template-columns: 6rem 6rem 6rem;
+  grid-template-rows: 2rem 2rem 5.5rem; 
+  grid-template-areas: 
+  "date             .                .               "
+  "side-bar-title   side-bar-title   side-bar-title  "
+  "side-bar-one-par side-bar-one-par side-bar-one-par";
   gap: 1rem 1rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
   border-bottom: 1px solid gray;
 }
 
-
-.date {
-    display: flex;
-    background-color: gray;
-    margin-right: 13rem;
-    font-size: 20px;
-    font-family: 'Courier New', Courier, monospace;
-    font-variant-caps: small-caps;
-    text-shadow: .5px .5px 2px black;
-    justify-content: center;
-    border-radius: 2px;
-    color: blanchedalmond;
-    box-shadow: 1px 1px 3px black;
-    font-weight: 600;
-  }
-  
-
 /* Side Bar Two -------------------------------------------------------------------------------------------------------------------*/
+
 #side-bar-two {
   display: grid;
   grid-area: side-bar-two;
-  grid-column: 1fr;
-  grid-row: 1 fr 1fr;
-  gap: 3rem 1rem;
+  grid-template-columns: 1fr;
+  
 }
 
 .learn-more-block {
   display: grid;
-  grid-column: 1fr;
-  grid-row: 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 10rem 10rem;
   gap: 2rem 2rem;
-  border-top: 1px solid gray;
-  padding-top: 2rem;
+  object-fit: contain;
 }
 
 .learn-more-block img {
-    float: left;
-    margin-right: 1rem;
-    margin-bottom: 1rem;
+  float: left;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
 }
 
-.learn-button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 8rem;
-    padding: 10px ;
-    color: blanchedalmond;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 2rem;
-    font-variant: small-caps;
-    text-shadow: .5px .5px 2px grey;
-    background-image: linear-gradient(to right,#fc4445, #fc4446, #fc4447);
-    border-radius: 5px;
-    box-shadow: 1px 1px 3px gray;
-    font-weight: 600;
+.learn-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  color: blanchedalmond;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2rem;
+  font-variant: small-caps;
+  text-shadow: 0.5px 0.5px 2px grey;
+  background-image: linear-gradient(to right, #fc4445, #fc4446, #fc4447);
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px gray;
+  font-weight: 600;
 }
 
 /* Main Content Container **********************************************************************************************************/
 #main-content {
   display: grid;
   grid-area: main-content;
-  grid-column: 1fr;
-  grid-row: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas:
     'main-content-title'
     'main-content-img'
-    'main-content-block-one'
-    'main-content-block-two'
-    'main-content-block-three';
+    'main-content-paragraphs';
+  margin-top: 3rem;
 }
 
 #main-content-title {
@@ -191,47 +198,49 @@ body {
   font-family: 'Courier New', Courier, monospace;
   font-weight: 600;
   padding-top: 2rem;
-  margin-bottom: -9rem;
 }
 
 #main-content-img {
   display: flex;
   grid-area: main-content-img;
-  margin-top: -5rem;
-  margin-right: auto;
+  object-fit: scale-down;
   box-shadow: 5px 5px 8px grey;
+  background-color: grey;
 }
 
 /* Main Content Paragraph Blocks --------------------------------------------------------------------------------------------------*/
-.main-content-block {
+#main-content-paragraphs {
   display: grid;
-  grid-area: main-content-block;
-  grid-column: 1fr;
-  grid-row: 1fr 1fr;
+  grid-area: main-content-paragraphs;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    'main-content-block-one'
+    'main-content-block-two'
+    'main-content-block-three';
   gap: 1rem 1rem;
 }
 
-#main-content-block-one {
+.main-content-block {
   display: grid;
-  grid-area: main-content-block-one;
 }
 
-#main-content-block-two {
-  display: grid;
-  grid-area: main-content-block-two;
-}
-
-#main-content-block-three {
-  display: grid;
-  grid-area: main-content-block-three;
+.main-content-subtitle {
+  display: flex;
+  color: gray;
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  font-variant-caps: small-caps;
+  font-weight: 600;
+  text-shadow: 0.5px 0.5px 2px black;
 }
 
 /* Footer /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 #footer {
   display: grid;
   grid-area: footer;
-  grid-column: 1fr 1fr 1fr;
-  grid-row: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   grid-template-areas:
     'footer-title  footer-title footer-title'
     'footer-inputs .            footer-info';
@@ -248,8 +257,8 @@ body {
 #footer-inputs {
   display: grid;
   grid-area: footer-inputs;
-  grid-column: 1fr 1fr;
-  grid-row: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas:
     'footer-input-name     footer-input-email'
     'footer-input-textarea footer-input-textarea'
@@ -281,8 +290,8 @@ body {
 #footer-info {
   display: grid;
   grid-area: footer-info;
-  grid-column: 1fr 1fr;
-  grid-row: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   grid-template-areas:
     'footer-info-message    footer-info-message'
     'footer-info-block-one  footer-info-block-two';
