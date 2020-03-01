@@ -1,0 +1,318 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: grid;
+    max-width: 100vw;
+    height: auto;
+    margin: 20px 50px 20px 50px;
+    grid-template-rows: 3rem 32rem 10rem 135rem 1rem;
+    gap: 1rem 1rem;
+    grid-template-areas:
+    "nav" 
+    "headercontainer"
+    "quote" 
+    "main"
+    "footer";
+  }
+
+/**Home Page**/
+#homepage {
+  color: gray;
+  text-shadow: 1px 1px 2px black;
+  font-variant-caps: small-caps;
+  font-size: 2rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+}
+
+/**Navigation Bar**/
+
+#nav {
+    grid-area: nav;
+    background-color:white;
+    background-image: black;
+  }
+  
+  .nav {
+    background-color: #333;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .nav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .nav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .nav a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+/**Header Container**/
+#headercontainer {
+  display: grid;
+  grid-area: headercontainer;
+  grid-template-rows: 15rem 20rem 8rem;
+  grid-template-areas: 
+  'header'
+  'imagecontainer'
+  'tellmemore';
+}
+/**Header**/
+  .header {
+    display: grid;
+    grid-area: header;
+    grid-template-rows: 5rem 3rem 5rem;
+    grid-template-areas:
+    'homepage'
+    'line1'
+    'line2';
+  }
+
+  #homepage {
+    font-size: 4rem;
+    color: #fc4445;
+    text-shadow: 2px 2px 3px gray;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  #line1 {
+    text-align: center;
+    grid-area: line1;
+  }
+
+  #line2 {
+    text-align: center;
+
+  }
+
+  hr {
+    width: 80%;
+    height: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    background: linear-gradient(45deg, red, blue);
+    background-color:transparent;
+    border: 0 none;
+    margin-top: 20px;
+    margin-bottom:100px;
+  }
+/**Image Container**/
+  #imagecontainer {
+    display: flex;
+    justify-content: space-around;
+  }
+/**Tell Me More Button**/
+#tellmemore {
+    background-color: green;
+    border: solid black;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    cursor: grab;
+    width: 10%;
+    margin: auto;
+}
+/**I want to center this button**/
+
+/**Quote**/
+#quote {
+    grid-area: quote;
+    text-align: center;
+    border: solid black;
+}
+  
+/**Main**/
+#main {
+    display: grid;
+    max-width: 100;
+    height: auto;
+    grid-area: main;
+    grid-template-columns: 55rem 30rem;
+    gap: 3rem 1rem;
+    grid-template-areas: 
+    'content-3 sidebar';
+}
+
+#maincontainer {
+    display: grid;
+    grid-template-rows: 30rem 30rem;
+    grid-template-areas: 
+    'content-3'
+    'content-4';
+}
+
+/**Bill Murray Main**/
+.content-3 {
+    grid-area: content-3;
+    display: grid;
+    grid-template-rows: 2rem 20rem 10rem;
+    grid-template-areas: 
+    'title'
+    'murray1'
+    'imagetext';
+}
+
+/**Nicolas Cage**/
+.content-4 {
+    grid-area: content-4;
+    display: grid;
+    grid-template-rows: 2rem 20rem 10rem;
+    grid-template-areas: 
+    'title1'
+    'cage1'
+    'imagetext';
+    margin-top: 30px;
+}
+/**Sidebar**/
+#sidebarcontainer {
+    display: grid;
+    grid-area: sidebar;
+    grid-template-rows: 25rem 25rem 25rem;
+    grid-template-areas: 
+    'sidebar-1'
+    'sidebar-2'
+    'sidebar-3';
+}
+
+.date {
+  background-color: gray;
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  text-shadow: 0.5px 0.5px 2px black;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+  color: blanchedalmond;
+  box-shadow: 1px 1px 3px black;
+  font-weight: 600;
+}
+
+.sidebar-3A {
+  grid-area: sidebar-3A;
+  color: gray;
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  text-shadow: 0.5px 0.5px 2px black;
+}
+
+.sidebar-1 {
+    grid-area: sidebar-1;
+    display: grid;
+    grid-template-rows: 2rem 2rem 10rem;
+    grid-template-areas: 
+    'date'
+    'sidebar-3A'
+    'sidebar-4A';
+    margin: 2px;
+}
+
+.sidebar-2 {
+    grid-area: sidebar-2;
+    display: grid;
+    grid-template-rows: 2rem 2rem 10rem;
+    grid-template-areas: 
+    'date'
+    'sidebar-3A'
+    'sidebar-4B';
+    margin: 2px;
+}
+
+.sidebar-3 {
+    grid-area: sidebar-3;
+    display: grid;
+    grid-template-rows: 2rem 2rem 10rem;
+    grid-template-areas: 
+    'date'
+    'sidebar-3A'
+    'sidebar-4C';
+    margin: 2px;
+}
+/**Footer**/
+/* Footer /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+#footer {
+  display: grid;
+  grid-area: footer;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    'footer-title  footer-title footer-title'
+    'footer-inputs .            footer-info';
+  gap: 1rem 1rem;
+}
+/* Footer Title ********************************************************************************************************************/
+#footer-title {
+  display: flex;
+  grid-area: footer-title;
+}
+/* Footer Inputs Container *********************************************************************************************************/
+#footer-inputs {
+  display: grid;
+  grid-area: footer-inputs;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    'footer-input-name     footer-input-email'
+    'footer-input-textarea footer-input-textarea'
+    'footer-input-button   .                   ';
+  gap: 1rem 1rem;
+}
+#footer-input-name {
+  display: flex;
+  grid-area: footer-input-name;
+}
+#footer-input-email {
+  display: flex;
+  grid-area: footer-input-email;
+}
+#footer-input-textarea {
+  display: flex;
+  grid-area: footer-input-textarea;
+}
+#footer-input-button {
+  display: flex;
+  grid-area: footer-input-button;
+}
+/* Footer Info Container ***********************************************************************************************************/
+#footer-info {
+  display: grid;
+  grid-area: footer-info;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    'footer-info-message    footer-info-message'
+    'footer-info-block-one  footer-info-block-two';
+  gap: 1rem 1rem;
+}
+#footer-info-message {
+  display: flex;
+  grid-area: footer-info-message;
+}
+#footer-info-block-one {
+  display: flex;
+  grid-area: footer-info-block-one;
+  flex-direction: column;
+}
+#footer-info-block-two {
+  display: flex;
+  grid-area: footer-info-block-two;
+  flex-direction: column;
+}
