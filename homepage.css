@@ -67,7 +67,7 @@
 #headercontainer {
   display: grid;
   grid-area: headercontainer;
-  grid-template-rows: 15rem 20rem 8rem;
+  grid-template-rows: 20rem 20rem 10rem;
   grid-template-areas: 
   'header'
   'imagecontainer'
@@ -77,10 +77,11 @@
   .header {
     display: grid;
     grid-area: header;
-    grid-template-rows: 5rem 3rem 5rem;
+    grid-template-rows: 5rem 5rem 5rem 8rem;
     grid-template-areas:
     'homepage'
     'line1'
+    'hr'
     'line2';
   }
 
@@ -100,7 +101,7 @@
 
   #line2 {
     text-align: center;
-
+    grid-area: line2;
   }
 
   hr {
@@ -111,8 +112,6 @@
     background: linear-gradient(45deg, red, blue);
     background-color:transparent;
     border: 0 none;
-    margin-top: 20px;
-    margin-bottom:100px;
   }
 /**Image Container**/
   #imagecontainer {
@@ -130,13 +129,24 @@
     width: 10%;
     margin: auto;
 }
-/**I want to center this button**/
-
 /**Quote**/
-#quote {
-    grid-area: quote;
-    text-align: center;
-    border: solid black;
+.quote {
+   display: grid;
+   grid-area: quote;
+   grid-template-columns: 2rem 2rem 2rem;
+   grid-template-rows: 18rem;
+   grid-template-areas: 
+    '. quote .';
+}
+
+#quote1 {
+  display: grid;
+  grid-area: quote1;
+  grid-template-rows: 10rem;
+  grid-template-areas: 
+  'quote';
+  border: solid;
+  text-align: center;
 }
   
 /**Main**/
@@ -145,7 +155,7 @@
     max-width: 100;
     height: auto;
     grid-area: main;
-    grid-template-columns: 55rem 30rem;
+    grid-template-columns: 70rem 30rem;
     gap: 3rem 1rem;
     grid-template-areas: 
     'content-3 sidebar';
@@ -153,7 +163,7 @@
 
 #maincontainer {
     display: grid;
-    grid-template-rows: 30rem 30rem;
+    grid-template-rows: 60rem 60rem;
     grid-template-areas: 
     'content-3'
     'content-4';
