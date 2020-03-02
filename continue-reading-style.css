@@ -23,10 +23,11 @@ body {
 #header-container {
   display: grid;
   grid-area: header-container;
-  grid-template-rows: 8rem 2rem;
+  grid-template-rows: 8rem 2rem 1rem;
   grid-template-areas:
     'header-title-one'
-    'header-title-two';
+    'header-title-two'
+    'header-divider';
   border-bottom: 1px solid grey;
 }
 
