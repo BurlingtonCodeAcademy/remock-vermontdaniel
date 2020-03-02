@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    max-width: 100vw;
+    height: auto;
+    margin: 10px 50px 20px 50px;
+    grid-template-rows: 200rem;
+    gap: 1rem 1rem;
+    grid-template-areas: 
+    'maincontainer';
+}
+
+/**Header - Main Container**/
+.maincontainer {
+    display: grid;
+    grid-area: maincontainer;
+    grid-template-rows: 10rem 40rem 20rem 100rem 40rem;
+    grid-template-areas: 
+    'header'
+    'features'
+    'quotecontainer'
+    'main'
+    'footer-container';
+}
+
+.header {
+    display: grid;
+    grid-area: header;
+    grid-template-rows: 5rem 5rem;
+    grid-template-areas: 
+    'homepage'
+    'underlinetext';
+}
+
+#homepage {
+    display: grid;
+    grid-area:homepage;
+    font-size: 4rem;
+    color: #fc4445;
+    text-shadow: 2px 2px 3px gray;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    text-align: center;
+}
+
+#underlinetext {
+    display: grid;
+    grid-area: underlinetext;
+    text-align: center;
+}
+
+/**Features - Main Container**/
+
+.features {
+    display: grid;
+    grid-area: features;
+    grid-template-rows: 3rem 20rem 5rem;
+    grid-template-areas:
+    'phototitle'
+    'imagecontainer'
+    'tellmebtn'
+}
+
+#phototitle {
+    display: grid;
+    grid-area: phototitle;
+    text-align: center;
+}
+
+#imagecontainer {
+    display: flex;
+    justify-content: space-around;
+}
+
+#murry {
+    text-align: center;
+}
+
+#cage {
+    text-align: center;
+}
+
+#segal {
+    text-align: center;
+}
+
+#tellmebtn {
+    display: grid;
+    grid-area: tellmebtn;
+    margin: auto;
+}
+
+/**Quote - Main Container**/
+
+.quotecontainer {
+    display: grid;
+    grid-area: quotecontainer;
+    grid-template-rows: 10rem;
+    grid-template-areas: 
+    'quote';
+}
+
+#quote {
+    display: grid;
+    grid-area: quote;
+    text-align: center;
+    border: solid black;
+}
+
+/**Main - Main Containter**/
+
+.main {
+    display: grid;
+    grid-area: main;
+    grid-template-columns: 52rem 12rem 15rem;
+    grid-template-areas: 
+    'main-articles . side-articles';
+}
+
+/**Main - Left Columns - Main Container**/
+
+#main-articles {
+    display: grid;
+    grid-area: main-articles;
+    grid-template-areas: 25rem 25rem;
+    grid-template-areas:
+    'story-one'
+    'story-two';
+}
+
+#story-one {
+    display: grid;
+    grid-area: story-one;
+}
+
+#story-two {
+    display: grid;
+    grid-area: story-two;
+}
+
+/**Main - Right Columns - Main Container**/
+
+.side-articles {
+    display: grid;
+    grid-area: side-articles;
+    grid-template-rows: 11rem 13rem;
+    grid-template-areas:
+    'article-one'
+    'article-two'
+    'article-three';
+}
+
+#article-one {
+    display: grid;
+    grid-area: article-one;
+    grid-template-rows: 2rem 2rem 6rem;
+    grid-template-areas: 
+    'date'
+    'side-title'
+    'side-paragraph';
+}
+
+#article-two {
+    display: grid;
+    grid-area: article-two;
+    grid-template-rows: 2rem 2rem 7rem;
+    grid-template-areas: 
+    'date'
+    'side-title'
+    'side-paragraph';
+}
+
+#article-three {
+    display: grid;
+    grid-area: article-three;
+    grid-template-rows: 2rem 2rem 8rem;
+    grid-template-areas: 
+    'date'
+    'side-title'
+    'side-paragraph';
+}
+
+
+
+/**Footer - Main Container - Daniel Johnson**/
+
+/* Footer /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
