@@ -189,9 +189,9 @@ body {
 
 /**Main - Bottom Right Column - Main Container**/
 
-.photo-article {
+.photo-articles {
     display: grid;
-    grid-area: photo-article;
+    grid-area: photo-articles;
     grid-template-rows: 30rem 30rem;
     grid-template-areas:
     'photo-article-one'
