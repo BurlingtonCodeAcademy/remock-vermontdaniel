@@ -118,10 +118,8 @@ body {
     display: grid;
     grid-area: main;
     grid-template-columns: 52rem 12rem 15rem;
-    grid-template-rows: 50rem 50rem;
     grid-template-areas: 
-    'main-articles . side-articles'
-    'main-articles . photo-articles';
+    'main-articles . wholeside';
 }
 
 /**Main - Left Columns - Main Container**/
@@ -213,13 +211,18 @@ body {
 #photo-article-two {
     display: grid;
     grid-area: photo-article-two;
-    grid-template-rows: 10rem 10rem 10rem 2rem;
+    grid-template-rows: 5rem 10rem 10rem 2rem;
     grid-template-columns: 10rem 10rem;
     grid-template-areas:
     'photo-title .'
     'photo-photo photo-text'
     'photo-photo photo-text'
     'photo-button .'
+}
+
+#photo-photo {
+    display: grid;
+    grid-area: photo-photo;
 }
 
 /**Footer - Main Container - Daniel Johnson**/
