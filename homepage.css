@@ -9,15 +9,18 @@
     max-width: 100vw;
     height: auto;
     margin: 10px 50px 20px 50px;
-    grid-template-rows: 10rem 1fr 1fr;
+    grid-template-rows: 10rem 1fr 1fr 1fr;
     gap: 1rem 1rem;
   }
+
+/*Header Container*/
 
   #header-container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    border-bottom: 1px solid gray;
   }
 
   #header-title {
@@ -36,5 +39,15 @@
     font-weight: 600;
   }
 
+/*Main Container One*/
 
-
+#main-container-one {
+  display: grid;
+  grid-template-columns: 5rem 5rem 5rem;
+  grid-template-rows: 5rem 5rem 5rem 5rem;
+  grid-template-areas:
+  'main-contanier-one-title main-contanier-one-title main-contanier-one-title'
+  'main-contanier-one-photo main-contanier-one-photo main-contanier-one-photo'
+  'main-container-one-photo-text main-container-one-photo-text main-container-one-photo-text'
+  '. photoButton .';
+}
