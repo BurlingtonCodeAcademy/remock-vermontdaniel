@@ -61,7 +61,7 @@ body {
 
 #main-container-one-photo-block{
   display: grid;
-  grid-template-columns: 300px 300px 300px;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 200px 1fr;
   grid-template-areas:
   "main-container-one-photo main-container-one-photo main-container-one-photo"
@@ -74,6 +74,8 @@ body {
 .main-container-one-photo{
   height: 200px;
   width: 300px;
+  background-color: black;
+  justify-self: center;
 }
 
 .main-container-one-photo-text{
