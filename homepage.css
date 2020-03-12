@@ -44,6 +44,7 @@ body {
   display: grid;
   grid-template-rows: 3rem 1fr 1fr 1fr;
   border-top: 1px solid gray;
+  gap: 2rem 2rem;
 }
 
 #main-container-one-title {
@@ -58,18 +59,23 @@ body {
   color: gray;
 }
 
-#main-container-photo-block{
+#main-container-one-photo-block{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 300px 300px 300px;
+  grid-template-rows: 200px 1fr;
   grid-template-areas:
-  "main-container-one-photo-one main-container-one-photo-two main-container-one-photo-three"
+  "main-container-one-photo main-container-one-photo main-container-one-photo"
   "main-container-one-text  main-container-one-text  main-container-one-text";
+  gap: 1rem 1rem;
 }
 
 
 
 .main-container-one-photo{
-  height: 300px;
-  width: 200px;
+  height: 200px;
+  width: 300px;
+}
+
+.main-container-one-photo-text{
+
 }
