@@ -67,6 +67,8 @@ body {
   "main-container-one-photo main-container-one-photo main-container-one-photo"
   "main-container-one-text  main-container-one-text  main-container-one-text";
   gap: 1rem 1rem;
+  margin-left: 10rem;
+  margin-right: 10rem;
 }
 
 
